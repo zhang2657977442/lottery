@@ -1,0 +1,21 @@
+<view>
+  <view class="titleCss">
+    <text class="titleTextCss">{{titleInfo}}</text>
+  </view>
+  <view class="weui-cells weui-cells_after-title">
+    <view class="weui-cell weui-cell_input">
+        <view class="weui-label labelCss">
+          <text class="textCss">手机号:</text>
+        </view>
+        <view class="weui-cell__bd">
+            <input bindinput="phoneInput" class="weui-input inputCss" placeholder-class="place-holder" placeholder="请输入手机号" type="number"/>
+        </view>
+    </view>
+  </view>
+  <view class="page__bd page__bd_spacing addBnCss">
+      <button loading="{{buttonStatus}}" disabled="{{buttonStatus}}" class="weui-btn" type="primary" bindtap="addUser">确定</button>
+  </view>
+  <view class="page__bd page__bd_spacing prizelink">
+     中奖记录
+  </view>
+</view>

@@ -1,0 +1,37 @@
+/**index.wxss**/
+.bg_1{
+  width: 650rpx;
+  height: 651rpx;
+  position: relative;
+}
+.bg_2{
+  width: 514rpx;
+  height: 514rpx;
+  position: absolute;
+  top: 59rpx;
+}
+.start{
+  width: 134rpx;
+  height: 163rpx;
+}
+.startbtn[plain]{
+  padding: 0;
+  border:none;   
+  width: 134rpx;
+  height: 163rpx;
+  position: absolute;
+  top: 220rpx;
+}
+.goto-share-layout{
+  margin-left: 10rpx;
+  padding: 2rpx 15rpx 10rpx 15rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  align-content: center;
+  width:  fit-content;
+  border: 1px solid #FD6592;
+  background-color: #FD6592;
+  border-radius: 10rpx;
+  box-shadow: 0 1px 1px rgba(0,0,0,.4);
+}
