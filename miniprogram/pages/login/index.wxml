@@ -15,7 +15,13 @@
   <view class="page__bd page__bd_spacing addBnCss">
       <button loading="{{buttonStatus}}" disabled="{{buttonStatus}}" class="weui-btn" type="primary" bindtap="addUser">确定</button>
   </view>
-  <view class="page__bd page__bd_spacing prizelink">
+  <view class="page__bd page__bd_spacing prizelink" bindtap="seePrize">
      中奖记录
   </view>
 </view>
+
+<i-modal title="标题" visible="{{ prizeVisible }}" bind:ok="handleClose1" bind:cancel="handleClose1">
+    <view wx:for="{{prizeList}}" wx:key="index">
+      {{item.prize}}
+    </view>
+</i-modal>

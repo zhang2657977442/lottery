@@ -23,18 +23,27 @@ exports.main = async (event, context) => {
   // console.log 的内容可以在云开发云函数调用日志查看
   const _ = db.command
   const phone = event.phone
+  const openid = wxContext.OPENID
   const result = await db.collection('user').where({
-    phone: _.eq(phone)
+    openid: _.eq(openid)
   }).get()
-  if(result.data.length>0&&result.data[0].lottery_num>=3){
-    return {
-      errno: -1,
-      message: "该手机号抽奖次数已满！"
+  if(result.data.length>0){
+    if(result.data[0].lottery_num>=3){
+      return {
+        errno: -1,
+        message: "该手机号抽奖次数已满！"
+      }
     }
-    }else if(result.data.length===0){
-      await db.collection('user').add({
-        data: {phone: phone,openid: wxContext.OPENID,lottery_num: 0,addtime: new Date()}
-      })
+    if(result.data[0].phone!==phone){
+      return {
+        errno: -1,
+        message: "一个微信号只可绑定一个手机号！"
+      }
+    }
+  }else{
+    await db.collection('user').add({
+      data: {phone: phone,openid: openid,lottery_num: 0,addtime: new Date()}
+    })
   }
   // 获取 WX Context (微信调用上下文)，包括 OPENID、APPID、及 UNIONID（需满足 UNIONID 获取条件）等信息
 

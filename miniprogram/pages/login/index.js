@@ -7,7 +7,9 @@ Page({
   data: {
     titleInfo: "填写手机号即可开始抽奖",
     phone: "",
-    buttonStatus: false
+    buttonStatus: false,
+    prizeList: [],
+    prizeVisible: false
   },
 
   /**
@@ -125,4 +127,32 @@ Page({
       phone: e.detail.value
     });
   },
+  seePrize:  function (e) {
+    wx.cloud.callFunction({
+      name: 'getPrizeList',
+      data: {},
+      success: res=>{
+        console.log(res.result)
+        if(res.result.errno===200){
+          this.setData({
+            prizeList: res.result.prizeList,
+            prizeVisible: true
+          });
+        }
+      },
+      fail: err=>{
+        wx.showModal({
+          title: '提示',
+          content: '调用程序失败！',
+          success(res) {
+          }
+        })
+      }
+    })
+  },
+  handleClose1 () {
+    this.setData({
+      prizeVisible: false
+    });
+  }
 })
