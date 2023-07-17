@@ -25,7 +25,7 @@ exports.main = async (event) => {
     }).update({
       data: {
         userInfo: {
-          lotteryNum: _.inc(3)
+          lotteryNum: _.inc(1)
         }
       },
     })

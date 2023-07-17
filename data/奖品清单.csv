@@ -1,0 +1,9 @@
+﻿index,type,name,odds,inventory,cash,img_url
+0,cash,0.01元,31,-1,0.01,../../images/cash.png
+1,cash,0.02元,31,-1,0.02,../../images/cash.png
+2,cash,0.03元,31,-1,0.03,../../images/cash.png
+3,goods,电饭锅,0.000001,5,0,../../images/pot.png
+4,cash,0.5元,0.05,20000,0.5,../../images/cash.png
+5,cash,88元,0.0001,10,88,../../images/cash.png
+6,cash,888元,0.000001,5,888,../../images/cash.png
+7,goods,手机,0,0,0,../../images/phone.png
