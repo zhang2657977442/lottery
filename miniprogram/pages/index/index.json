@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "wx_empower": "/components/wx_empower/wx_empower",
+    "wx_exchanger": "/components/wx_exchanger/wx_exchanger",
+    "wx_address": "/components/wx_address/wx_address"
+  }
+}

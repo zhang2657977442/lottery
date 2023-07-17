@@ -1,0 +1,130 @@
+<view>
+    <wx_empower id="wx_empower" bind:login="login" bind:getUserInfo="getUserInfo"></wx_empower>
+    <wx_exchanger id="wx_exchanger" wx:if="{{isEcShow}}" bind:exchangeSuccess="exchangeSuccess" bind:closePopup="closePopup"></wx_exchanger>
+    <wx_address id="wx_address" wx:if="{{isAdressShow}}" recordId="{{recordId}}" bind:submitSuccess="submitSuccess"></wx_address>
+    <view class="lottery-wrap">
+        <view class="lottery-page">
+            <text class="text-vertical title">幸运福利抽奖</text>
+            <view class="userinfo">
+                <view class="avatar">
+                    <image src="{{userInfo.avatarUrl}}" class="wx_icon"></image>
+                </view>
+                <view class="username">
+                    <text>{{userInfo.nickName}}</text>
+                </view>
+            </view>
+            <view class="lottery-box">
+                <view class="lottery-num">
+                    <text>您有</text>
+                    <text>{{userInfo.lotteryNum}}</text>
+                    <text>次抽奖机会</text>
+                </view>
+                <view class="lottery-container">
+                    <view class="lottery">
+                        <view class="lottery_wrap">
+                            <view class="lottery-dot-single lottery-dot-left-top">
+                            </view>
+                            <view class="lottery-dot-single lottery-dot-left-bottom">
+                            </view>
+                            <view class="lottery-dot-single lottery-dot-right-top">
+                            </view>
+                            <view class="lottery-dot-single lottery-dot-right-bottom">
+                            </view>
+                            <view class="lottery-dot-top">
+                                <view class="horizontal">
+                                    <view wx:for="{{5}}" wx:key="index" class="lottery-dot-item"></view>
+                                </view>
+                            </view>
+                            <view class="lottery-dot-bottom">
+                                <view class="horizontal">
+                                    <view wx:for="{{5}}" wx:key="index" class="lottery-dot-item"></view>
+                                </view>
+                            </view>
+                            <view class="lottery-dot-left">
+                                <view class="vertical">
+                                    <view wx:for="{{5}}" wx:key="index" class="lottery-dot-item"></view>
+                                </view>
+                            </view>
+                            <view class="lottery-dot-right">
+                                <view class="vertical">
+                                    <view wx:for="{{5}}" wx:key="index" class="lottery-dot-item"></view>
+                                </view>
+                            </view>
+                            <view class="lottery-inner">
+                                <view class="lottery-inner-wrap">
+                                    <view class="lottery-list">
+                                        <view wx:for="{{prizeList}}" wx:key="index" class="lottery-turntable-item {{activeIndex % 8 === index  ? 'is-actived' : ''}} {{selectIndex === index ? 'is-selected' : ''}}">
+
+                                            <view class="lottery-turntable-cell">
+                                                <image src="{{item.img_url}}" mode="aspectFit" />
+                                                <wxs src="../tools.wxs" module="tools" />
+                                                <text wx:if="{{item.type === 'cash'}}">{{tools.substring(item.name,0,6)}}</text>
+                                                <text wx:else>{{item.name}}</text>
+                                            </view>
+                                        </view>
+                                    </view>
+                                    <view class="lottery-start-btn" bindtap="startLottery">
+                                        <view class="lottery-btn-inner">
+                                            <view class="lottery-btn">
+                                                <view class="lottery-btn-image">
+                                                    <text>开始</text>
+                                                </view>
+                                            </view>
+                                        </view>
+                                    </view>
+                                </view>
+                            </view>
+                        </view>
+                    </view>
+                </view>
+
+            </view>
+        </view>
+    </view>
+
+    <view class="lottery-exchange">
+        <text class="text-vertical" bindtap="OpenEc">兑换次数</text>
+    </view>
+    <view class="lottery-prize">
+        <text class="text-vertical" bindtap="toRecord">中奖记录</text>
+    </view>
+    <view class="lottery-details">
+        <view class="details-header">
+            <image src="../../images/title-left.svg" mode="aspectFill" />
+            <text class="title">活动详情</text>
+            <image class="icon-right" src="../../images/title-left.svg" mode="aspectFill" />
+        </view>
+        <view class="details-body">
+            <view class="item">
+                <text class="title">活动时间</text>
+                <text class="desc">2023-06-01至2024-07-01</text>
+                <text class="title">活动内容</text>
+                <text class="desc">活动期间，通过兑换码来获得抽奖次数，一个兑换码可换取3次抽奖资格。
+                </text>
+                <text class="title">奖品说明</text>
+                <text class="desc">现金奖励中奖后，直接到账微信账户，实物奖励中奖后，请填写完整地址，如不填写视为放弃</text>
+                <text class="desc"></text>
+            </view>
+        </view>
+    </view>
+
+    <view wx:if="{{isDialogShow}}" class="lottery-dialog">
+        <view class="lottery-dialog-inner">
+            <view class="lottery-dialog-receive">
+                <text class="receive-title">恭喜你获得</text>
+                <text class="receive-typography">奖品可前往“中奖记录”里查看</text>
+                <view class="receive-img">
+                    <image src="{{prizeList[selectIndex].img_url}}" mode="aspectFit" />
+                    <text>{{prizeList[selectIndex].name}}</text>
+                </view>
+                <button wx:if="{{prizeList[lotteryIndex].type === 'goods'}}" class="receive-btn" bindtap="completeAddress">
+                    <text>填写收货地址</text>
+                </button>
+                <button wx:else class="receive-btn" bindtap="closeDialog">
+                    <text>开心收下</text>
+                </button>
+            </view>
+        </view>
+
+    </view>
+</view>

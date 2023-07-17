@@ -1,0 +1,168 @@
+.mask1 {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, .5);
+
+  z-index: 100;
+}
+
+.address_box {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 102;
+  display: flex;
+  align-items: center;
+}
+
+.address_view {
+  margin: 0 auto;
+  width: 600rpx;
+  background: linear-gradient(180deg, #fdf5ce, #fff 30.62%);
+  border-radius: 10px;
+  margin-bottom: 100rpx;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+
+.address-header {
+  width: 100%;
+  height: 69.5px;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  border-radius: 10px 10px 0px 0px;
+  background: linear-gradient(rgb(255, 245, 201) 0%, rgb(255, 255, 255) 100%);
+  position: relative;
+  align-items: center;
+  border: 0;
+  margin-bottom: -0.5px;
+  padding: 12px;
+  text-align: center;
+}
+
+.address-header .title {
+  width: fit-content;
+  height: 52PX;
+  color: rgb(143, 56, 0);
+  font-size: 20px;
+  line-height: 52px;
+  font-weight: bolder;
+  position: relative;
+  font-family: "PingFang SC";
+  white-space: pre-line;
+  vertical-align: middle;
+}
+
+.address-header image {
+  width: 14px;
+  height: 16PX;
+  margin-top: 5px;
+  max-width: 100%;
+}
+
+image.icon-right {
+  transform: rotateY(180deg);
+}
+
+.address-header::before {
+  background: linear-gradient(45deg, rgba(143, 56, 0, 0), #8f3800);
+  content: "";
+  height: 2px;
+  left: 30rpx;
+  position: absolute;
+  top: 38px;
+  width: 120rpx;
+  background-image: linear-gradient(45deg, rgba(143, 56, 0, 0), rgb(143, 56, 0));
+  background-position-x: initial;
+  background-position-y: initial;
+  background-size: initial;
+  background-attachment: initial;
+  background-origin: initial;
+  background-clip: initial;
+  background-color: initial;
+}
+
+.address-header::after {
+  background: linear-gradient(90deg, #8f3800 0, rgba(143, 56, 0, 0));
+  content: "";
+  height: 2px;
+  position: absolute;
+  right: 30rpx;
+  top: 38px;
+  width: 120rpx;
+  background-image: linear-gradient(90deg, rgb(143, 56, 0) 0px, rgba(143, 56, 0, 0));
+  background-position-x: initial;
+  background-position-y: initial;
+  background-size: initial;
+  background-attachment: initial;
+  background-origin: initial;
+  background-clip: initial;
+  background-color: initial;
+}
+
+.address-form {
+  background: #fff;
+  width: 100%;
+  padding: 0 40rpx;
+  border-radius: 0 0 10px 10px;
+}
+
+.form-item {
+  width: 100%;
+}
+
+.form-item .label {
+  margin: 20rpx 0;
+}
+
+.form-item input {
+  margin: 20rpx 0;
+  height: 100rpx;
+  background: #F1F2F5;
+  border-radius: 5px;
+  padding: 0 10rpx;
+}
+
+.form-item .picker {
+  margin: 20rpx 0;
+  height: 100rpx;
+  line-height: 100rpx;
+  background: #F1F2F5;
+  border-radius: 5px;
+  padding: 0 10rpx;
+  color: #858585;
+}
+
+.form-item textarea {
+  width: 96%;
+  margin: 20rpx 0;
+  height: 150rpx;
+  background: #F1F2F5;
+  border-radius: 5px;
+  padding: 20rpx 10rpx;
+}
+
+.submit-btn {
+  width: 200rpx;
+  height: 40px;
+  border: none;
+  color: #fff;
+  background: #ff2424;
+  background: linear-gradient(90deg, #ff2424 0, #ff9f69 102.57%);
+  border-radius: 10rpx;
+  margin: 40rpx;
+}

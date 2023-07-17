@@ -1,0 +1,10 @@
+<view class="mask1">
+  <view class="login_box">
+    <view class="login_view">
+      <image class="close" src="../../images/close.svg" mode="aspectFill" bindtap="close" />
+      <view class="wx_name">兑换抽奖次数</view>
+      <input class="weui-input" auto-focus placeholder="请输入8位兑换码" bindinput="bindKeyInput" />
+      <button class="login_botton" bindtap="exchange">确认</button>
+    </view>
+  </view>
+</view>

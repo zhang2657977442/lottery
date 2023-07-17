@@ -1,0 +1,29 @@
+.record-page image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+.record-item {
+    display: flex;
+    flex-direction: column;
+    padding: 15px 20px;
+    border-bottom: 1px solid #e7e7e7;
+}
+
+.record-item .name {
+    margin-bottom: 8px;
+    color: rgba(0, 0, 0, 0.9);
+    font-size: 16px;
+    line-height: 24px;
+    text-align: left;
+}
+
+.record-item .time {
+    color: rgba(0, 0, 0, 0.4);
+    font-size: 14px;
+    text-align: left;
+}

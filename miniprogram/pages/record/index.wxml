@@ -1,0 +1,9 @@
+<view class="record-page">    <wxs src="./../tools.wxs" module="tools" />
+    <view wx:if="{{recordList.length}}" class="record-list">
+        <view wx:for="{{recordList}}" wx:key="index" class="record-item">
+            <text class="name">奖品：{{item.name}}</text>
+            <text class="time">中奖时间：{{item.createTime}}</text>
+        </view>
+    </view>
+    <image wx:else src="../../images/record-empty.svg" mode="" />
+</view>

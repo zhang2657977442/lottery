@@ -1,0 +1,10 @@
+<view class="mask1" wx:if="{{flag}}">
+  <view class="login_box">
+    <view class="login_view" catchtap="stop">
+      <image src="../../images/wx.png" class="wx_icon"></image>
+      <view class="wx_name">微信授权登录</view>
+      <view class="wx_tips">获取您的公开信息(昵称、头像等)</view>
+      <button class="login_botton" bindtap="getUserProfile">授权登录</button>
+    </view>
+  </view>
+</view>

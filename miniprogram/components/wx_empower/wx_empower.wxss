@@ -1,0 +1,69 @@
+/* components/wx_empower/wx_empower.wxss */
+.mask1 {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, .5);
+
+  z-index: 100;
+}
+
+.login_box {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 102;
+  display: flex;
+  align-items: center;
+}
+
+.login_view {
+  margin: 0 auto;
+  width: 500rpx;
+  height: 550rpx;
+  background: linear-gradient(180deg, #fdf5ce, #fff 30.62%);
+  border-radius: 10px;
+  margin-bottom: 100rpx;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+.wx_icon {
+  width: 100rpx;
+  height: 100rpx;
+}
+
+.wx_name {
+  margin-top: 30rpx;
+  color: #000;
+  font-size: 34rpx;
+  font-weight: bold;
+}
+
+.wx_tips {
+  font-size: 28rpx;
+  margin-top: 30rpx;
+  color: #333333;
+}
+
+.login_botton {
+  margin-top: 86rpx;
+  padding: 12rpx 76rpx;
+  border-radius: 40rpx;
+  background: rgba(217, 0, 27, 1);
+  color: #fff;
+  font-size: 32rpx;
+  margin-bottom: 20rpx;
+}

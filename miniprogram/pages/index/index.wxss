@@ -1,0 +1,691 @@
+.lottery-wrap {
+    width: 100%;
+    min-height: 750px;
+    position: relative;
+    background-image: url(https://imgcache.qq.com/open_proj/proj_qcloud_v2/weda-template/lottery/src/styles/img/weda-lottery-bg.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    padding: 20px 0;
+}
+
+.lottery-page {
+    padding-top: 60px;
+}
+
+.userinfo {
+    margin-top: 50px;
+}
+
+.userinfo .avatar {
+    text-align: center;
+}
+
+.userinfo .avatar image {
+    width: 150rpx;
+    height: 150rpx;
+    border-radius: 50%;
+}
+
+.userinfo .username {
+    margin-bottom: 177.5px;
+    display: flex;
+    justify-content: center;
+    background-color: #fff8d5;
+    border-radius: 24px;
+    box-shadow: inset 0-0.5px 0#ff6b00;
+    line-height: 30px;
+    margin: 16px auto 0;
+    padding: 0 20px;
+    width: fit-content;
+}
+
+.userinfo .username text {
+    width: 100%;
+    color: rgb(211, 97, 57);
+    font-size: 16px;
+    line-height: 30px;
+    font-weight: 600;
+}
+
+.lottery-box {
+    padding-top: 120px;
+    margin: 0 auto;
+    padding-left: 22px;
+    padding-right: 22px;
+}
+
+.lottery-box .lottery-num {
+    width: 201px;
+    height: 39px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 1;
+    border-radius: 30px;
+    background: rgb(255, 255, 255);
+    box-shadow: 0 10px 16px rgba(235, 0, 28, 0.8);
+    margin: 0 auto;
+    position: relative;
+    margin-bottom: 18px;
+}
+
+.lottery-num::before {
+    background: transparent;
+    border-color: transparent #fff #fff transparent;
+    border-style: solid;
+    border-width: 12px;
+    bottom: -5px;
+    content: "";
+    height: 0;
+    left: 50%;
+    position: absolute;
+    width: 0;
+    background-image: initial;
+    background-position-x: initial;
+    background-position-y: initial;
+    background-size: initial;
+    background-attachment: initial;
+    background-origin: initial;
+    background-clip: initial;
+    background-color: transparent;
+    border-top-color: transparent;
+    border-right-color: rgb(255, 255, 255);
+    border-bottom-color: rgb(255, 255, 255);
+    border-left-color: transparent;
+    border-top-style: solid;
+    border-right-style: solid;
+    border-bottom-style: solid;
+    border-left-style: solid;
+    border-top-width: 12px;
+    border-right-width: 12px;
+    border-bottom-width: 12px;
+    border-left-width: 12px;
+    transform: translateX(-50%) rotate(45deg);
+}
+
+.lottery-box .lottery-num text {
+    color: rgb(232, 34, 51);
+    font-size: 16px;
+    font-weight: 200px;
+    white-space: pre-line;
+}
+
+.lottery-box .lottery-container {
+    width: 100%;
+    height: 326px;
+    opacity: 1;
+    position: relative;
+}
+
+.lottery-box .lottery-container .lottery {
+    position: relative;
+    width: 100%;
+}
+
+.lottery-box .lottery-container .lottery::before {
+    content: "";
+    float: left;
+    padding-top: 100%;
+}
+
+.lottery-box .lottery-container .lottery::after {
+    clear: both;
+    content: "";
+    display: block;
+}
+
+.lottery .lottery_wrap {
+    background: #ff465c;
+    border: 2rpx solid hsla(0, 0%, 100%, 0.6);
+    border-radius: 20rpx;
+    bottom: 0;
+    box-shadow: inset 0 0 8rpx hsla(0, 0%, 100%, 0.5);
+    height: 100%;
+    left: 0;
+    object-fit: cover;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100%;
+}
+
+.lottery-dot-single,
+.lottery-dot-item {
+    background: #fff;
+    border-radius: 50%;
+    box-shadow: 0 0 8rpx hsla(0, 0%, 100%, 0.3);
+    height: 18rpx;
+    width: 18rpx;
+}
+
+.horizontal .lottery-dot-item {
+    margin-right: 86rpx;
+}
+
+.vertical .lottery-dot-item {
+    margin-bottom: 86rpx;
+}
+
+.lottery-dot-item:nth-child(odd) {
+    background: #ffee52;
+}
+
+.lottery-dot-left-top {
+    left: 12rpx;
+    position: absolute;
+    top: 18rpx;
+}
+
+.lottery-dot-left-bottom {
+    bottom: 18rpx;
+    left: 12rpx;
+    position: absolute;
+}
+
+.lottery-dot-right-top {
+    position: absolute;
+    right: 12rpx;
+    top: 18rpx;
+}
+
+.lottery-dot-right-bottom {
+    bottom: 18rpx;
+    position: absolute;
+    right: 12rpx;
+}
+
+.lottery-dot-top {
+    left: calc((100% - 434rpx) / 2);
+    position: absolute;
+    top: 8rpx;
+}
+
+.lottery-dot-bottom {
+    bottom: 8rpx;
+    left: calc((100% - 434rpx) / 2);
+    position: absolute;
+}
+
+.lottery-dot-left {
+    left: 8rpx;
+    position: absolute;
+    top: calc((100% - 434rpx) / 2);
+}
+
+.lottery-dot-right {
+    position: absolute;
+    right: 8rpx;
+    top: calc((100% - 434rpx) / 2);
+}
+
+
+.lottery-inner {
+    box-sizing: border-box;
+    height: 100%;
+    padding: 36rpx;
+    width: 100%;
+}
+
+.lottery-inner .lottery-inner-wrap {
+    background: linear-gradient(180deg, #dd0d00, #d80027);
+    border: 2rpx solid hsla(0, 0%, 100%, 0.25);
+    border-radius: 20rpx;
+    box-shadow: inset 0 0 8rpx hsla(0, 0%, 100%, 0.5);
+    box-sizing: border-box;
+    height: 100%;
+    position: relative;
+    width: 100%;
+}
+
+.lottery-list {
+    bottom: 0;
+    box-sizing: border-box;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 1;
+}
+
+.lottery-list .lottery-turntable-item {
+    background: #fff8ee;
+    border-radius: 16rpx;
+    box-shadow: inset 0-4rpx 0#ffddbd;
+    box-sizing: border-box;
+    font-size: 0;
+    height: calc((100% - 64rpx) / 3);
+    position: absolute;
+    text-align: center;
+    width: calc((100% - 64rpx) / 3);
+}
+
+.lottery-turntable-item.is-actived {
+    border: 4px solid #ffe05f;
+    background: #fff8ee;
+    box-shadow: 0 0 12rpx #fff;
+    box-sizing: border-box;
+}
+
+.lottery-turntable-item.is-selected {
+    background: #f66;
+    box-shadow: inset 0-4rpx 0#ffa4a4;
+}
+
+
+.lottery-list .lottery-turntable-item:first-child {
+    left: 16rpx;
+    top: 16rpx;
+}
+
+.lottery-list .lottery-turntable-item:nth-child(2) {
+    left: calc((100% - 64rpx) / 3 + 32rpx);
+    top: 16rpx;
+}
+
+.lottery-list .lottery-turntable-item:nth-child(3) {
+    right: 16rpx;
+    top: 16rpx;
+}
+
+.lottery-list .lottery-turntable-item:nth-child(4) {
+    right: 16rpx;
+    top: calc((100% - 64rpx) / 3 + 32rpx);
+}
+
+.lottery-list .lottery-turntable-item:nth-child(5) {
+    bottom: 16rpx;
+    right: 16rpx;
+}
+
+.lottery-list .lottery-turntable-item:nth-child(6) {
+    bottom: 16rpx;
+    left: calc((100% - 64rpx) / 3 + 32rpx);
+}
+
+.lottery-list .lottery-turntable-item:nth-child(7) {
+    bottom: 16rpx;
+    left: 16rpx;
+}
+
+.lottery-list .lottery-turntable-item:nth-child(8) {
+    bottom: calc((100% - 64rpx) / 3 + 32rpx);
+    left: 16rpx;
+}
+
+.lottery-turntable-item .lottery-turntable-cell {
+    align-items: center;
+    border: 8rpx solid transparent;
+    border-radius: 16rpx;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-between;
+    max-height: 100%;
+    max-width: 100%;
+    padding: 10rpx 5rpx;
+    width: 100%;
+}
+
+
+.lottery-turntable-cell image {
+    width: 70%;
+    height: 70%;
+}
+
+.lottery-turntable-cell text {
+    font-size: 13px;
+    color: #8A3931;
+}
+
+.lottery-inner-wrap .lottery-start-btn {
+    background: linear-gradient(180deg, #ffee81, #ffd646);
+    border-radius: 50%;
+    box-shadow: inset 0-4rpx 0#ff7a00;
+    height: calc((100% - 64rpx) / 3);
+    left: calc((100% - 64rpx) / 3 + 32rpx);
+    position: absolute;
+    top: calc((100% - 64rpx) / 3 + 32rpx);
+    width: calc((100% - 64rpx) / 3);
+    z-index: 2;
+}
+
+.lottery-start-btn .lottery-btn-inner {
+    height: 100%;
+    padding: 18rpx;
+    width: 100%;
+}
+
+.lottery-btn-inner .lottery-btn {
+    background: linear-gradient(180deg, #ff922d, #ff3c76);
+    box-shadow: inset 0 0 16rpx rgba(234, 27, 53, 0.5);
+    align-items: center;
+    border-radius: 50%;
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    width: 100%;
+}
+
+.lottery-btn .lottery-btn-image {
+    padding: 22rpx 30rpx;
+    width: 100%;
+}
+
+.lottery-btn-image text {
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    color: #fff;
+    display: -webkit-box;
+    font-size: 18px;
+    font-weight: 600;
+    height: 100%;
+    line-height: 22px;
+    max-height: 100%;
+    overflow: hidden;
+    text-align: center;
+    text-overflow: ellipsis;
+    text-shadow: 0 0.5px 0#e42b27;
+    width: 100%;
+}
+
+
+
+
+
+
+
+.lottery-page .title {
+    color: rgb(255, 255, 255);
+    font-size: 40px;
+    text-align: center;
+    font-weight: 400;
+    font-style: normal;
+    font-family: 'ReeJi-BigRuixain-BoldGBV';
+}
+
+.lottery-exchange {
+    position: fixed;
+    top: 92px;
+    background: #f40833;
+    border-radius: 24px 0 0 24px;
+    box-shadow: 0 2px 2px #ff6d62;
+    height: 36px;
+    padding: 1px 0 1px 1px;
+    right: 0;
+    width: 88px;
+    z-index: 99;
+}
+
+.lottery-prize {
+    position: fixed;
+    top: 140px;
+    background: #f40833;
+    border-radius: 24px 0 0 24px;
+    box-shadow: 0 2px 2px #ff6d62;
+    height: 36px;
+    padding: 1px 0 1px 1px;
+    right: 0;
+    width: 88px;
+    z-index: 99;
+}
+
+
+.lottery-prize text,
+.lottery-exchange text {
+    width: 100%;
+    height: 100%;
+    padding: 1px 0px;
+    z-index: 9999;
+    color: rgb(255, 255, 255);
+    line-height: 30px;
+    text-align: center;
+    border: 0.5px solid rgb(255, 255, 255);
+    border-radius: 24px 0px 0px 24px;
+    position: relative;
+    box-shadow: none;
+    white-space: pre-line;
+    border-right: 0;
+}
+
+.lottery-details {
+    width: 100%;
+    padding: 60px 22px 40px;
+    background: rgb(251, 25, 65);
+}
+
+.details-header {
+    width: 100%;
+    height: 69.5px;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    border-radius: 10px 10px 0px 0px;
+    background: linear-gradient(rgb(255, 245, 201) 0%, rgb(255, 255, 255) 100%);
+    position: relative;
+    align-items: center;
+    border: 0;
+    margin-bottom: -0.5px;
+    padding: 12px;
+    text-align: center;
+}
+
+.details-header .title {
+    width: fit-content;
+    height: 52PX;
+    color: rgb(143, 56, 0);
+    font-size: 20px;
+    line-height: 52px;
+    font-weight: bolder;
+    position: relative;
+    font-family: "PingFang SC";
+    white-space: pre-line;
+    vertical-align: middle;
+}
+
+.details-header image {
+    width: 14px;
+    height: 16PX;
+    margin-top: 5px;
+    max-width: 100%;
+}
+
+image.icon-right {
+    transform: rotateY(180deg);
+}
+
+.details-header::before {
+    background: linear-gradient(45deg, rgba(143, 56, 0, 0), #8f3800);
+    content: "";
+    height: 2px;
+    left: 30px;
+    position: absolute;
+    top: 38px;
+    width: 66px;
+    background-image: linear-gradient(45deg, rgba(143, 56, 0, 0), rgb(143, 56, 0));
+    background-position-x: initial;
+    background-position-y: initial;
+    background-size: initial;
+    background-attachment: initial;
+    background-origin: initial;
+    background-clip: initial;
+    background-color: initial;
+}
+
+.details-header::after {
+    background: linear-gradient(90deg, #8f3800 0, rgba(143, 56, 0, 0));
+    content: "";
+    height: 2px;
+    position: absolute;
+    right: 30px;
+    top: 38px;
+    width: 66px;
+    background-image: linear-gradient(90deg, rgb(143, 56, 0) 0px, rgba(143, 56, 0, 0));
+    background-position-x: initial;
+    background-position-y: initial;
+    background-size: initial;
+    background-attachment: initial;
+    background-origin: initial;
+    background-clip: initial;
+    background-color: initial;
+}
+
+.details-body {
+    width: 100%;
+    padding-right: 18px;
+    padding-left: 18px;
+    opacity: 1;
+    border-radius: 0 0 20px 20px;
+    background: rgb(255, 255, 255);
+    padding: 0 18px 15px;
+}
+
+.details-body .item .title {
+    position: relative;
+    height: 24px;
+    margin-bottom: 4px;
+    color: rgb(0, 0, 0);
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 500;
+    font-family: "PingFang SC";
+    white-space: pre-line;
+    padding-left: 8px;
+    margin-bottom: 4px;
+    font-weight: 600;
+}
+
+.details-body .item .title::before {
+    background-color: #000;
+    border-radius: 50%;
+    content: "";
+    height: 4px;
+    left: 0;
+    position: absolute;
+    top: 10px;
+    width: 4px;
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+    border-bottom-right-radius: 50%;
+    border-bottom-left-radius: 50%;
+}
+
+.details-body .item .desc {
+    margin: 8px 0;
+    color: rgba(0, 0, 0, 0.9);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 28px;
+    opacity: 1;
+    font-family: "PingFang SC";
+    white-space: pre-line;
+    display: -webkit-box;
+    overflow: hidden;
+}
+
+.lottery-dialog {
+    z-index: 99;
+    background: rgba(0, 0, 0, 0.6);
+    position: fixed;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    bottom: 0px;
+}
+
+.lottery-dialog-inner {
+    width: 305px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.lottery-dialog-receive {
+    width: 305px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background: linear-gradient(180deg, #fdf5ce, #fff 30.62%);
+    border-radius: 20px;
+    padding: 46px 46px 40px;
+    position: relative;
+}
+
+.lottery-dialog-receive .receive-title {
+    color: rgb(233, 42, 0);
+    font-size: 20px;
+    line-height: 56px;
+    text-align: center;
+    opacity: 1;
+    font-family: "PingFang SC";
+    white-space: pre-line;
+    background-image: url(https://imgcache.qq.com/open_proj/proj_qcloud_v2/weda-template/lottery/src/styles/img/slice/weda-lottery-receive-title-bg.svg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    height: 56px;
+    left: 12%;
+    margin-left: -117px;
+    position: absolute;
+    top: -34px;
+    width: 234px;
+    margin: 0;
+}
+
+.lottery-dialog-receive .receive-typography {
+    margin-top: 6px;
+    margin-bottom: 12px;
+    color: rgb(143, 56, 0);
+    font-size: 12px;
+    line-height: 17px;
+    text-align: center;
+    font-weight: 400;
+    font-family: "PingFang SC";
+    white-space: pre-line;
+    -webkit-box-orient: vertical;
+    display: -webkit-box !important;
+    overflow: hidden !important;
+}
+
+.lottery-dialog-receive .receive-img {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    height: 120px;
+    justify-content: center;
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+    width: 192px;
+}
+
+.receive-img image {
+    max-width: 100%;
+    width: 136px;
+    height: 90px;
+}
+
+.receive-img text {
+    margin-top: 15px;
+    font-size: 15px;
+    color: #8A3931;
+}
+
+.lottery-dialog-receive .receive-btn {
+    width: 214px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    color: #fff;
+    background: #ff2424;
+    background: -moz-linear-gradient(left, #ff2424 0, #ff9f69 102.57%);
+    background: -webkit-linear-gradient(left, #ff2424, #ff9f69 102.57%);
+    background: linear-gradient(90deg, #ff2424 0, #ff9f69 102.57%);
+    border-radius: 4px;
+    margin-top: 22px;
+}
