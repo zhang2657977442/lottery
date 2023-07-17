@@ -227,6 +227,7 @@ Page({
     })
   },
   wxPayment(cash) {
+    // 对接微信支付
     console.log(cash)
   }
 })
