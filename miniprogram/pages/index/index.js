@@ -102,9 +102,9 @@ Page({
         for (let i = 0; i < arr.length; i++) {
           let random = Math.random() * leng; //获取 0-总数 之间的一个随随机整数
           if (random < arr[i].odds) {
+            const prizeIndex = this.data.prizeList.findIndex((item) => item.index == arr[i].index)
             this.setData({
-
-              lotteryIndex: i
+              lotteryIndex: prizeIndex
             })
             console.log(arr[i].name, this.data.lotteryIndex)
             this.startAnimation()
