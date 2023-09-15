@@ -31,10 +31,13 @@
 
 ![](https://github.com/zhang2657977442/MyPicGo/blob/master/lottery/%E5%88%9B%E5%BB%BA%E9%9B%86%E5%90%88.png?raw=true)
 
-+ 修改集合数据权限，把exchange_code、prize集合改为所有用户可读，其他集合默认
++ 修改集合数据权限，把exchange_code集合改为所有用户可读
++ 把prize集合改为自定义安全规则，其他集合默认
 + 给prize集合创建index索引
 
 ![](https://github.com/zhang2657977442/MyPicGo/blob/master/lottery/%E4%BF%AE%E6%94%B9%E6%9D%83%E9%99%90.png?raw=true)
+
+![](https://github.com/zhang2657977442/MyPicGo/blob/master/lottery/%E4%BF%AE%E6%94%B9%E6%9D%83%E9%99%902.png?raw=true)
 
 + 导入兑换码数据，把data中的兑换码.csv导入到exchange_code集合中
 

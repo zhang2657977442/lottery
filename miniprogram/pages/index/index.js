@@ -202,10 +202,9 @@ Page({
   },
   updatePrizeNum(index) {
     if (this.data.prizeList[index].inventory !== -1) {
+      const id = this.data.prizeList[index]._id
       const _ = wx.cloud.database().command
-      wx.cloud.database().collection('prize').where({
-        index: index
-      }).update({
+      wx.cloud.database().collection('prize').doc(id).update({
         data: {
           inventory: _.inc(-1)
         },

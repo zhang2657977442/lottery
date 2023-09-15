@@ -16,7 +16,7 @@
             <view class="lottery-box">
                 <view class="lottery-num">
                     <text>您有</text>
-                    <text>{{userInfo.lotteryNum}}</text>
+                    <text>{{userInfo.lotteryNum || 0}}</text>
                     <text>次抽奖机会</text>
                 </view>
                 <view class="lottery-container">
